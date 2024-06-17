@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 //Coffee maker heating coil check, prints the highest temp experienced. 200F is the target.
+=======
+//Coffee maker heating coil check, prints the highest temp experienced. 200F is the target.
+
+>>>>>>> origin/master
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <Wire.h> 
