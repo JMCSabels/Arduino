@@ -1,3 +1,5 @@
+
+//Coffee maker heating coil check, prints the highest temp experienced. 200F is the target.
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <Wire.h> 
@@ -25,13 +27,11 @@ void setup() {
 }
 
 void loop() {
-  // set the cursor to column 0, line 1
-  // (note: line 1 is the second row, since counting begins with 0):
-  sensors.requestTemperatures();
-  
-  lcd.setCursor(0, 1);
 
-  // print the number of seconds since reset:         READING IN IR VALUE, for the 
+  sensors.requestTemperatures();
+  lcd.setCursor(0, 1); //row 0, slot 1
+
+  // input for thermometer
   long tempValue = sensors.getTempCByIndex(0);
   tempValue = tempValue*1.8 + 32;
 
